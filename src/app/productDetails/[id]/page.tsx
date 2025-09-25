@@ -7,13 +7,13 @@ export const metadata = {
     title: 'Product Details',
 };
 
-type ProductPageProps = {
-    params: {
-        id: string
-    }
-}
+// type ProductPageProps = {
+//     params: {
+//         id: string
+//     }
+// }
 
-export default async function ProductDetails({ params }: ProductPageProps) {
+export default async function ProductDetails({ params }: { params: any }) {
 
 
     const product = await getProductDetails(params.id)
